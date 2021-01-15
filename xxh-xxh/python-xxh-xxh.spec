@@ -38,10 +38,10 @@ installations.</p><p align"center"> If you like the idea of xxh click ⭐ on the
 repo and stay tuned. <a href' alt'[xxh demo]' src' border"0" width"100%">
 <col...
 
-%package -n xxh-seamless-bash
+%package -n xxh-bash
 Summary:        Bash seamless script for xxh
-Requires:       xxh
-%description -n xxh-seamless-bash
+Requires:       xxh = %{version}-%{release}
+%description -n xxh-bash
 <p align"center">You stuffed command shell with aliases, tools and colors but
 you lose it all when using ssh. The mission of xxh is to bring your favorite
 shell wherever you go through the ssh without root access and system
@@ -49,10 +49,10 @@ installations.</p><p align"center"> If you like the idea of xxh click ⭐ on the
 repo and stay tuned. <a href' alt'[xxh demo]' src' border"0" width"100%">
 <col...
 
-%package -n xxh-seamless-zsh
+%package -n xxh-zsh
 Summary:        ZSH seamless script for xxh
-Requires:       xxh
-%description -n xxh-seamless-zsh
+Requires:       xxh = %{version}-%{release}
+%description -n xxh-zsh
 <p align"center">You stuffed command shell with aliases, tools and colors but
 you lose it all when using ssh. The mission of xxh is to bring your favorite
 shell wherever you go through the ssh without root access and system
@@ -60,10 +60,10 @@ installations.</p><p align"center"> If you like the idea of xxh click ⭐ on the
 repo and stay tuned. <a href' alt'[xxh demo]' src' border"0" width"100%">
 <col...
 
-%package -n xxh-seamless-xonsh
+%package -n xxh-xonsh
 Summary:        Xonsh seamless script for xxh
-Requires:       xxh
-%description -n xxh-seamless-xonsh
+Requires:       xxh = %{version}-%{release}
+%description -n xxh-xonsh
 <p align"center">You stuffed command shell with aliases, tools and colors but
 you lose it all when using ssh. The mission of xxh is to bring your favorite
 shell wherever you go through the ssh without root access and system
@@ -90,17 +90,20 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/xxh_xxh
 %{python3_sitelib}/xxh_xxh-%{version}-py%{python3_version}.egg-info
 
-%files -n xxh-seamless-bash
+%files -n xxh-bash
 %{_bindir}/xxh.bash
 
-%files -n xxh-seamless-zsh
+%files -n xxh-zsh
 %{_bindir}/xxh.zsh
 
-%files -n xxh-seamless-xonsh
+%files -n xxh-xonsh
 %{_bindir}/xxh.xsh
 
 
 %changelog
 * Fri Jan 15 2021 Jerzy Drozdz <jerzy.drozdz@jdsieci.pl> - 0.8.6-2
+- Seamless scripts moved to seperate packages
+
 * Tue Jan 12 2021 mockbuilder - 0.8.6-1
 - Initial package.
+
